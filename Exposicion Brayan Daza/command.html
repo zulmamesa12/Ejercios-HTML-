@@ -1,0 +1,24 @@
+<!DOCTYPE html> <!--para colocar un boton -->
+<html>
+<head>
+	<title>command</title>
+</head>
+<body>
+<menu type = "toolbar">
+
+<command type ="radio" radiogroup=" alignment" checked= "checked" label = "sena" onclick= " setAlign('zulma')"><button>mostrar mensaje</button> </command ><br>
+
+<command type ="radio" radiogroup=" alignment" checked= "checked" label = "correo" onclick= "setAlign('correo')" ><label "center" >mostrar este mensaje</label> </command> 
+
+
+</menu> 
+
+<script type="text/javascript">
+
+function setAlign (texto){
+	alert ("parametro enviado"+ texto);
+}
+</script>
+
+</body>
+</html>
