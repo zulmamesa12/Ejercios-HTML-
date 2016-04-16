@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table border="1" id="producttable">
+	  <thead>
+	    <tr>
+	      <td>UPC_Code</td>
+	      <td>Product_Name</td>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <!-- existing data could optionally be included here -->
+	  </tbody>
+	</table>
+
+	<template id="productrow">
+	  <tr>
+	    <td class="record"></td>
+	    <td></td>
+	  </tr>
+	</template>
+</body>
+</html>
+
+<script type="text/javascript">
+// Test to see if the browser supports the HTML template element by checking
+// for the presence of the template element's content attribute.
+if ('content' in document.createElement('template')) {
+
+  // Instantiate the table with the existing HTML tbody and the row with the template
+  var t = document.querySelector('#productrow'),
+  td = t.content.querySelectorAll("td");
+  td[0].textContent = "00000";
+  td[1].textContent = "zulma";
+
+  // Clone the new row and insert it into the table
+  var tb = document.getElementsByTagName("tbody");
+  var clone = document.importNode(t.content, true);
+  tb[0].appendChild(clone);
+  
+  // Create a new row
+  td[0].textContent = "01111";
+  td[1].textContent = "maritza mesa ";
+
+  // Clone the new row and insert it into the table
+  var clone2 = document.importNode(t.content, true);
+  tb[0].appendChild(clone2);
+
+} else {
+  // Find another way to add the rows to the table because 
+  // the HTML template element is not supported.
+}
+</script>
