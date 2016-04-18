@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--xml: espacio preservado No soportado en HTML5. Especifica si los espacios en blanco en el código deben ser preservados-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Etiqueta Script</title>
+ 
+
+        <!--async: Especifica que el script se ejecuta de forma asíncrona. Nota: El atributo async de la etiqueta de script no es compatible con Internet Explorer 9 y versiones anteriores.-->
+        <script src="demo_async.js" async></script>
+
+        <!--Type: Especifica el tipo de medio del guión-->
+        <script type="text/javascript">
+          alert("Hola Mundo!");
+        </script>
+
+
+<p>Esta p&aacute;gina contiene varios script y con sus atributos respectivos</p>
+<p   id = "demo"> La letra va a ser  de color verde y de tama&ntilde;o 60px en la segunda l&iacute;nea</p>
+<p id="demo2"> Al dar click en el boton cambia de color y tama&ntilde;o. </p>
+
+
+<!--crear un boton que al darle click cambiar la apariencia de la letra-->
+<button onclick = "myFunction()"> Click </button>
+
+</head>
+ 
+<body>
+
+        <!--defer: Especifica que el script se ejecuta cuando la página ha terminado de analizar (sólo para los scripts externos)-->
+        <script src="demo_defer.js" defer></script> 
+
+
+        <!--charset: Especifica la codificación de caracteres utilizado en un archivo de script externo-->
+        <script charset="UTF-8" src="demo_script_charset.js"></script>
+        <br>
+        <p>Estas dos l&iacute;neas tienen el atributo charset. Los caracteres griegos se muestran correctamente, ya que son parte del conjunto de caracteres "UTF-8".</p>
+        <p>Intente cambiar los juegos de caracteres de "ISO-8859-1" (por defecto), "windows-1252" o "UTF-16".</p>
+
+
+<script >
+
+
+
+    function myFunction() {
+
+    <!--variable var-->
+    var x = document.getElementById("demo");
+
+    x.style.fontSize = "40px"; 
+    x.style.color = "pink"; 
+
+
+    var y = document.getElementById("demo2");
+
+    y.style.fontSize = "60px"; 
+    y.style.color = "green"; 
+    
+    }
+    
+</script>
+</body>
+</html>
